@@ -1,8 +1,10 @@
 import { Button, Container, Flex, Heading, Link, Stack, Text } from '@chakra-ui/react';
 import React from 'react'
+import { Navigate, useNavigate } from 'react-router-dom';
 import { Illustration } from '../components/common/Illustration';
 
 function Home() {
+  const navigate = useNavigate();
   return (
     <Container maxW='5xl'>
       <Stack
@@ -28,12 +30,11 @@ function Home() {
         <Stack spacing={6} direction='row'>
           <Button
             rounded='full'
-            as={Link}
-            href="/login"
             px={6}
             colorScheme='orange'
             bg='orange.400'
             _hover={{ bg: 'orange.500' }} //applying hover effect
+            onClick={()=>navigate("/login")}
             >
             Get started
           </Button>

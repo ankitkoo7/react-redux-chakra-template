@@ -11,7 +11,8 @@ export const loginAction =
         return nagivate("/")
       })
       .catch((error) => {
-        return nagivate("/") //remove thi after you setup your api endpoints
+        localStorage.setItem("accessToken", "some_encrpyted_token_from_response") //remove this after you setup your api endpoints
+        return nagivate("/") //remove this after you setup your api endpoints
         dispatch(loginFailure(error));
       });
   };

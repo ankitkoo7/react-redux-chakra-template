@@ -11,6 +11,7 @@ export const loginAction =
         return nagivate("/")
       })
       .catch((error) => {
+        return nagivate("/") //remove thi after you setup your api endpoints
         dispatch(loginFailure(error));
       });
   };

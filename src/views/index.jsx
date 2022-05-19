@@ -28,6 +28,8 @@ function Home() {
         <Stack spacing={6} direction='row'>
           <Button
             rounded='full'
+            as={Link}
+            href="/login"
             px={6}
             colorScheme='orange'
             bg='orange.400'
